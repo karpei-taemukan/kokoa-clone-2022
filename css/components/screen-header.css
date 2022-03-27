@@ -1,0 +1,41 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--horizontal-space);
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.screen-header__title {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.screen-header__icons span {
+  position: relative;
+  margin-left: 25px;
+}
+
+.red_point {
+  position: absolute;
+  background-color: tomato;
+  width: 8px;
+  height: 8px;
+  right: 20px;
+  top: 40px;
+  border-radius: 50%;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateCog 1s linear infinite;
+}
